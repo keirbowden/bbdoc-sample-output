@@ -1,0 +1,168 @@
+<html>
+    <head>
+        <style>
+            html,
+            body {
+                font-size: 12px;
+                font-family: sans-serif;
+                margin: 1em 4em;
+            }
+
+            table {
+                width: 100%;
+                font-size: 12px;
+                border-collapse: collapse;
+            }
+
+            th {
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+
+            td,
+            th {
+                text-align: left;
+                border: 1px solid black;
+                padding: 5px;
+            }
+
+            h1 {
+                text-align: center;
+                color: #fe7c40;
+            }
+
+            h2 {
+                margin-top: 2em;
+                color: #fe7c40;
+            }
+
+            p {
+                text-align: left;
+            }
+
+            figcaption {
+                text-align: center;
+            }
+
+            .centeredimage {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+            }
+
+            li {
+                padding-bottom: 0.4em;
+            }
+
+            .footer {
+                font-size: 10px;
+                padding: 20px 20px 30px 20px;
+                text-align: center;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+    <body>
+        <a href="objects.html">Objects</a>
+        <h1>Event Objects</h1>
+        <p style="font-size: 1.2em">Objects associated with events</p> 
+
+        <h2>Menu</h2>
+        <ul>
+            
+                <li><a style="font-size: 1.2em;" href="#Author_Reading__c">Author Reading </a></li>
+            
+                <li><a style="font-size: 1.2em;" href="#Book_Signing__c">Book Signing </a></li>
+            
+        </ul>
+        
+        
+            <h2><a name="Author_Reading__c">Author Reading</a></h2>
+            <p style="font-size:1.25em"><strong>API Name : </strong>Author_Reading__c</p>
+            <p><span style="font-size:1.25em"><strong>Description : </strong>An event where the author reads selected chapters from a new book which the attendees have the option of buying.</span></p>
+            <p style="padding-top:1em; font-size:1.25em"><strong>Fields</strong></p>
+            <table>
+                <tr>
+                    <th style="width:17%">Name</th>
+                    <th style="width:15%">Label</th>
+                    <th style="width:10%">Type</th>
+                    <th style="width:40%">Description</th>
+                    <th style="width:18%">Info</th>
+                </tr>
+                
+                    <tr style="background-color: ">
+                        <td>Book__c</td>
+                        <td>Book</td>
+                        <td>Lookup</td>
+                        <td>The book that the author will be reading from.</td>
+                        <td><strong>Lookup</strong> : Book__c</td>
+                    </tr>
+                
+                    <tr style="background-color: ">
+                        <td>Virtual__c</td>
+                        <td>Virtual</td>
+                        <td>Checkbox</td>
+                        <td>Indicates if this is a virtual event.</td>
+                        <td></td>
+                    </tr>
+                
+            </table>
+            
+            
+        
+            <h2><a name="Book_Signing__c">Book Signing</a></h2>
+            <p style="font-size:1.25em"><strong>API Name : </strong>Book_Signing__c</p>
+            <p><span style="font-size:1.25em"><strong>Description : </strong>An event where the author of the book signs copies purchased by customers.</span></p>
+            <p style="padding-top:1em; font-size:1.25em"><strong>Fields</strong></p>
+            <table>
+                <tr>
+                    <th style="width:17%">Name</th>
+                    <th style="width:15%">Label</th>
+                    <th style="width:10%">Type</th>
+                    <th style="width:40%">Description</th>
+                    <th style="width:18%">Info</th>
+                </tr>
+                
+                    <tr style="background-color: ">
+                        <td>Author__c</td>
+                        <td>Author</td>
+                        <td>Lookup</td>
+                        <td>The author who will be signing copies of their book.</td>
+                        <td><strong>Lookup</strong> : Author__c</td>
+                    </tr>
+                
+                    <tr style="background-color: ">
+                        <td>Book__c</td>
+                        <td>Book</td>
+                        <td>Lookup</td>
+                        <td>The book that the author will be signing copies of.</td>
+                        <td><strong>Lookup</strong> : Book__c</td>
+                    </tr>
+                
+                    <tr style="background-color: orange">
+                        <td>Ends__c</td>
+                        <td>Ends</td>
+                        <td>DateTime</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                
+                    <tr style="background-color: orange">
+                        <td>Starts__c</td>
+                        <td>Starts</td>
+                        <td>DateTime</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                
+            </table>
+            
+            
+        
+        <div class="footer" style="float:right;">Generated 2020-04-26T17:20:48.304Z</div>
+        <div class="footer" style="float:left;">BrightGen Org Documentor v2.0.3</div>
+    </body>
+
+</html>
