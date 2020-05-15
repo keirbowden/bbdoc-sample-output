@@ -81,9 +81,12 @@
         </ul>
         
         
+            <div style="padding-top:1em;"/>
+            <hr/>
             <h2><a name="Author__c">Author</a></h2>
             <p style="font-size:1.25em"><strong>API Name : </strong>Author__c</p>
             <p><span style="font-size:1.25em"><strong>Description : </strong>A person who has written one or more books that have been published.</span></p>
+                        
             <p style="padding-top:1em; font-size:1.25em"><strong>Fields</strong></p>
             <table>
                 <tr>
@@ -122,9 +125,12 @@
             
             
         
+            <div style="padding-top:1em;"/>
+            <hr/>
             <h2><a name="Book__c">Book</a></h2>
             <p style="font-size:1.25em"><strong>API Name : </strong>Book__c</p>
             <p><span style="font-size:1.25em"><strong>Description : </strong>A book that is in the store inventory.</span></p>
+                        
             <p style="padding-top:1em; font-size:1.25em"><strong>Fields</strong></p>
             <table>
                 <tr>
@@ -170,10 +176,35 @@
             </table>
             
             
+                <p style="padding-top:1em; font-size:1.25em">  
+                    <strong>Validation Rules</strong>
+                </p>
+
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                         <th>Active</th>
+                         <th>Criteria</th>
+                    </tr>
+            
+                    
+                        <tr>
+                            <td>Fifty_pages_or_more</td>
+                            <td>The book must have 50 pages or more, otherwise it&#39;s a pamphlet</td>
+                            <td>false</td>
+                            <td>Pages__c &lt; 50</td>
+                        </tr>
+                    
+                </table>
+            
         
+            <div style="padding-top:1em;"/>
+            <hr/>
             <h2><a name="Publisher__c">Publisher</a></h2>
             <p style="font-size:1.25em"><strong>API Name : </strong>Publisher__c</p>
             <p><span style="font-size:1.25em"><strong>Description : </strong>The person/group responsible for bringing the book to the public. The publisher is involved in the major steps of developing, marketing, producing, printing, and distributing the book</span></p>
+                        
             <p style="padding-top:1em; font-size:1.25em"><strong>Fields</strong></p>
             <table>
                 <tr>
@@ -196,7 +227,7 @@
                         <td>Website__c</td>
                         <td>Website</td>
                         <td>Url</td>
-                        <td>The publisher&amp;#39;s web site.</td>
+                        <td>The publisher&#39;s web site.</td>
                         <td></td>
                     </tr>
                 
@@ -204,8 +235,8 @@
             
             
         
-        <div class="footer" style="float:right;">Generated 2020-04-26T17:20:48.304Z</div>
-        <div class="footer" style="float:left;">BrightGen Org Documentor v2.0.3</div>
+        <div class="footer" style="float:right;">Generated 2020-05-15T17:50:01.011Z</div>
+        <div class="footer" style="float:left;">Bob Buzzard's Org Documentor v2.1.2</div>
     </body>
 
 </html>
