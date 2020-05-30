@@ -1,100 +1,86 @@
 <html>
-    <head>
-        <style>
-            html,
-            body {
-                font-size: 12px;
-                font-family: sans-serif;
-                margin: 1em 4em;
-            }
 
-            table {
-                width: 100%;
-                font-size: 12px;
-                border-collapse: collapse;
-            }
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+    html {
+        position: relative;
+        min-height: 100%;
+    }
 
-            th {
-                font-size: 1.2em;
-                font-weight: bold;
-            }
+    body {
+        /* Margin bottom by footer height */
+        margin-bottom: 60px;
+    }
 
-            td,
-            th {
-                text-align: left;
-                border: 1px solid black;
-                padding: 5px;
-            }
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        /* Set the fixed height of the footer here */
+        height: 60px;
+        line-height: 60px;
+        /* Vertically center the text there */
+        background-color: #f5f5f5;
+    }
 
-            h1 {
-                text-align: center;
-                color: #fe7c40;
-            }
+    .doc-header {
+        background-color: #c9a9d6;
+    }
 
-            h2 {
-                margin-top: 2em;
-                color: #fe7c40;
-            }
+    nav .doc-header {
+        margin-bottom: -2em;
+    }
+</style>
+</head>
 
-            p {
-                text-align: left;
-            }
+<body>
+    <div class="doc-header">
+        <nav aria-label="breadcrumb" class="container doc-header">
+            <ol class="breadcrumb doc-header">
+                <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="objects.html">Objects</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Event Objects</li>
+            </ol>
+        </nav>    
+        <div class="jumbotron jumbotron-fluid doc-header">
+            <div class="container">
+                <h1 class="display-4">Event Objects</h1>
+                <p class="lead">Objects associated with events</p>
+            </div>
+        </div>
+    </div>
 
-            figcaption {
-                text-align: center;
-            }
-
-            .centeredimage {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 50%;
-            }
-
-            li {
-                padding-bottom: 0.4em;
-            }
-
-            .footer {
-                font-size: 10px;
-                padding: 20px 20px 30px 20px;
-                text-align: center;
-                font-weight: bold;
-            }
-        </style>
-    </head>
-
-    <body>
-        <a href="objects.html">Objects</a>
-        <h1>Event Objects</h1>
-        <p style="font-size: 1.2em">Objects associated with events</p> 
-
+    <div class="container">
         <h2>Menu</h2>
-        <ul>
+        <nav class="nav flex-column">
             
-                <li><a style="font-size: 1.2em;" href="#Author_Reading__c">Author Reading </a></li>
+                <a class="nav-link pb-0" href="#Author_Reading__c">Author Reading</a>
             
-                <li><a style="font-size: 1.2em;" href="#Book_Signing__c">Book Signing </a></li>
+                <a class="nav-link pb-0" href="#Book_Signing__c">Book Signing</a>
             
-        </ul>
+        </nav>        
+        <div class="mt-5"></div>
         
-        
-            <div style="padding-top:1em;"/>
-            <hr/>
-            <h2><a name="Author_Reading__c">Author Reading</a></h2>
-            <p style="font-size:1.25em"><strong>API Name : </strong>Author_Reading__c</p>
-            <p><span style="font-size:1.25em"><strong>Description : </strong>An event where the author reads selected chapters from a new book which the attendees have the option of buying.</span></p>
-                        
-            <p style="padding-top:1em; font-size:1.25em"><strong>Fields</strong></p>
-            <table>
-                <tr>
-                    <th style="width:17%">Name</th>
-                    <th style="width:15%">Label</th>
-                    <th style="width:10%">Type</th>
-                    <th style="width:40%">Description</th>
-                    <th style="width:18%">Info</th>
-                </tr>
+        <div class="card mb-5">
+            <h3 class="card-header bg-info text-white"><a name="Author_Reading__c">Author Reading</a></h5>
+            <div class="card-body">        
+                <h6 class="card-subtitle mb-2 text-muted"><strong>API Name : </strong>Author_Reading__c</h6>
+                <p>An event where the author reads selected chapters from a new book which the attendees have the option of buying.</p>
                 
+                <h5 class="pt-3">Fields</h5>
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th style="width:17%">Name</th>
+                            <th style="width:15%">Label</th>
+                            <th style="width:10%">Type</th>
+                            <th style="width:40%">Description</th>
+                            <th style="width:18%">Info</th>
+                        </tr>
+                    </thead>
+                    
                     <tr style="background-color: ">
                         <td>Book__c</td>
                         <td>Book</td>
@@ -102,7 +88,7 @@
                         <td>The book that the author will be reading from.</td>
                         <td><strong>Lookup</strong> : Book__c</td>
                     </tr>
-                
+                    
                     <tr style="background-color: ">
                         <td>Virtual__c</td>
                         <td>Virtual</td>
@@ -110,56 +96,60 @@
                         <td>Indicates if this is a virtual event.</td>
                         <td></td>
                     </tr>
-                
-            </table>
-            
-            
-        
-            <div style="padding-top:1em;"/>
-            <hr/>
-            <h2><a name="Book_Signing__c">Book Signing</a></h2>
-            <p style="font-size:1.25em"><strong>API Name : </strong>Book_Signing__c</p>
-            <p><span style="font-size:1.25em"><strong>Description : </strong>An event where the author of the book signs copies purchased by customers.</span></p>
-            
-                <p style="padding-top:1em; font-size:1.25em">  
-                    <strong>Record Types</strong>
-                </p>
-
-                <table>
-                    <tr>
-                        <th>Label</th>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Active</th>
-                    </tr>
-            
-                    
-                        <tr>
-                            <td>Conference</td>
-                            <td>Conference</td>
-                            <td>A book signing at a conference.</td>
-                            <td>true</td>
-                        </tr>
-                    
-                        <tr>
-                            <td>In Store</td>
-                            <td>In_Store</td>
-                            <td>A book signing in a book store</td>
-                            <td>true</td>
-                        </tr>
                     
                 </table>
-                        
-            <p style="padding-top:1em; font-size:1.25em"><strong>Fields</strong></p>
-            <table>
-                <tr>
-                    <th style="width:17%">Name</th>
-                    <th style="width:15%">Label</th>
-                    <th style="width:10%">Type</th>
-                    <th style="width:40%">Description</th>
-                    <th style="width:18%">Info</th>
-                </tr>
+
                 
+            </div>
+        </div>
+    
+        <div class="card mb-5">
+            <h3 class="card-header bg-info text-white"><a name="Book_Signing__c">Book Signing</a></h5>
+            <div class="card-body">        
+                <h6 class="card-subtitle mb-2 text-muted"><strong>API Name : </strong>Book_Signing__c</h6>
+                <p>An event where the author of the book signs copies purchased by customers.</p>
+                
+                <h5 class="pt-3">Record Types</h5>
+
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Label</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Active</th>
+                        </tr>
+                    </thead>
+
+                    
+                    <tr>
+                        <td>Conference</td>
+                        <td>Conference</td>
+                        <td>A book signing at a conference.</td>
+                        <td>true</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>In Store</td>
+                        <td>In_Store</td>
+                        <td>A book signing in a book store</td>
+                        <td>true</td>
+                    </tr>
+                    
+                </table>
+                
+                <h5 class="pt-3">Fields</h5>
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th style="width:17%">Name</th>
+                            <th style="width:15%">Label</th>
+                            <th style="width:10%">Type</th>
+                            <th style="width:40%">Description</th>
+                            <th style="width:18%">Info</th>
+                        </tr>
+                    </thead>
+                    
                     <tr style="background-color: ">
                         <td>Author__c</td>
                         <td>Author</td>
@@ -167,7 +157,7 @@
                         <td>The author who will be signing copies of their book.</td>
                         <td><strong>Lookup</strong> : Author__c</td>
                     </tr>
-                
+                    
                     <tr style="background-color: ">
                         <td>Book__c</td>
                         <td>Book</td>
@@ -175,7 +165,7 @@
                         <td>The book that the author will be signing copies of.</td>
                         <td><strong>Lookup</strong> : Book__c</td>
                     </tr>
-                
+                    
                     <tr style="background-color: orange">
                         <td>Ends__c</td>
                         <td>Ends</td>
@@ -183,7 +173,7 @@
                         <td></td>
                         <td></td>
                     </tr>
-                
+                    
                     <tr style="background-color: orange">
                         <td>Starts__c</td>
                         <td>Starts</td>
@@ -191,13 +181,29 @@
                         <td></td>
                         <td></td>
                     </tr>
+                    
+                </table>
+
                 
-            </table>
-            
-            
-        
-        <div class="footer" style="float:right;">Generated 2020-05-15T17:50:01.011Z</div>
-        <div class="footer" style="float:left;">Bob Buzzard's Org Documentor v2.1.2</div>
-    </body>
+            </div>
+        </div>
+    
+    </div>
+    <div class="pt-3"></div>
+<footer class="footer">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-6">
+                <p class="text-left"><small class="text-muted">Generated 2020-05-30T12:56:52.825Z</small>
+                </p>
+            </div>
+            <div class="col-6">
+                <p class="text-right"><small class="text-muted">Bob Buzzard's Org Documentor
+                        v3.0.1</small></p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
 
 </html>

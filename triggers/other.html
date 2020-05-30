@@ -36,50 +36,47 @@
 
     <body>
         <div class="doc-header">
-            <nav aria-label="breadcrumb" class="container doc-header">
+            <nav aria-label="breadcrumb" class="container">
                 <ol class="breadcrumb doc-header">
                     <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Objects</li>
+                    <li class="breadcrumb-item"><a href="triggers.html">Triggers</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">All Triggers</li>
                 </ol>
-            </nav>    
+            </nav>
             <div class="jumbotron jumbotron-fluid doc-header">
                 <div class="container">
-                    <h1 class="display-4">Objects</h1>
-                    <p class="lead">Custom Objects</p>
+                    <h1 class="display-4">All Triggers</h1>
+                    <p class="lead">All triggers defined in the example repo</p>
                 </div>
-            </div>
+            </div>            
         </div>
         <div class="container">
-            <table class="table">
+            <table class="table table-bordered">
                 <tr>
-                    <th>Group</th>
-                    <th>Detail</th>
+                    <th>Name</th>
+                    <th>Object</th>
+                    <th>Actions</th>
+                    <th>Status</th>
+                    <th>API</th>
                 </tr>
                 
                     <tr>
-                        <td>Event Objects</td>
-                        <td><a href="events.html">Click to View</a></td>
+                        <td>Book_ai.trigger</td>
+                        <td>Book__c</td>
+                        <td>before insert</td>
+                        <td>Active</td>
+                        <td>48</td>
                     </tr>
                 
                     <tr>
-                        <td>Uncategorised Objects</td>
-                        <td><a href="other.html">Click to View</a></td>
+                        <td>Book_au.trigger</td>
+                        <td>Book__c</td>
+                        <td>before insert, before update</td>
+                        <td>Active</td>
+                        <td>48</td>
                     </tr>
                 
             </table>
-            <h6 class="text-muted pt-4 text-right">5 objects processed</h6>
-            
-                <div class="mt-5"></div>
-                <h4 class="bg-warning text-center mb-4">Missing Descriptions</h4>
-                <p>The following fields are missing descriptions:</p>
-                <ol>
-                    
-                        <li>Book_Signing__c.Ends__c</li>
-                    
-                        <li>Book_Signing__c.Starts__c</li>
-                                    
-                </ol>
-                    
         </div>
         <div class="pt-3"></div>
 <footer class="footer">
