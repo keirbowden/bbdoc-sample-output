@@ -39,12 +39,12 @@
             <nav aria-label="breadcrumb" class="container">
                 <ol class="breadcrumb doc-header">
                     <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Triggers</li>
+                    <li class="breadcrumb-item active" aria-current="page">Aura Enabled</li>
                 </ol>
             </nav>
             <div class="jumbotron jumbotron-fluid doc-header">
                 <div class="container">
-                    <h1 class="display-4">Triggers</h1>
+                    <h1 class="display-4">Aura Enabled</h1>
                     <p class="lead"></p>
                 </div>
             </div>                    
@@ -57,33 +57,24 @@
                 </tr>
                 
                     <tr>
-                        <td>All Triggers</td>
+                        <td>AuraEnabled Components</td>
                         <td><a href="other.html">Click to View</a></td>
                     </tr>
                 
             </table>
             
-            <h6 class="text-muted pt-4 text-right">2 triggers processed</h6>
-
+            <h6 class="text-muted pt-4 text-right">2 components processed</h6>
             
                 <div class="mt-5"></div>
-                <h4 class="bg-danger text-white text-center mb-4">Duplicates Detected</h4>
-                <p>The following object + action combinations have more than one trigger defined - the order that these triggers will be invoked in cannot be guaranteed.</p>
-                <table class="table">
-                    <tr>
-                        <th>Object</th>
-                        <th>Action</th>
-                        <th>Triggers</th>
-                    </tr>
+                <h4 class="bg-danger text-center mb-4">No Access</h4>
+                <p>The following controller classes have aura enabled methods used by Aura or Lightning Web Components, but are not accessible from any profile or permissionset. In Winter 21 these components will error.</p>
+                <ol>
                     
-                        <tr>
-                            <td>Book__c</td>
-                            <td>before insert</td>
-                            <td>Book_ai,Book_au</td>
-                        </tr>
+                        <li>AuthorController</li>
+                                    
+                </ol>
                     
-                </table>
-            
+
         </div>
         <div class="pt-3"></div>
 <footer class="footer">

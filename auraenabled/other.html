@@ -39,51 +39,56 @@
             <nav aria-label="breadcrumb" class="container">
                 <ol class="breadcrumb doc-header">
                     <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Triggers</li>
+                    <li class="breadcrumb-item"><a href="auraenabled.html">Aura Enabled</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">AuraEnabled Components</li>
                 </ol>
             </nav>
             <div class="jumbotron jumbotron-fluid doc-header">
                 <div class="container">
-                    <h1 class="display-4">Triggers</h1>
-                    <p class="lead"></p>
+                    <h1 class="display-4">AuraEnabled Components</h1>
+                    <p class="lead">All components with Apex controllers</p>
                 </div>
-            </div>                    
+            </div>            
         </div>
         <div class="container">
-            <table class="table">
+            <table class="table table-bordered">
                 <tr>
-                    <th>Group</th>
-                    <th>Detail</th>
+                    <th>Component Name</th>
+                    <th>Type</th>
+                    <th>Controller</th>
+                    <th>Profiles</th>
+                    <th>Permission Sets</th>
                 </tr>
                 
-                    <tr>
-                        <td>All Triggers</td>
-                        <td><a href="other.html">Click to View</a></td>
+                    <tr class="">
+                        <td>allBooks</td>
+                        <td>lwc</td>
+                        <td>BookController</td>
+                        <td>
+                            
+                                Admin
+                            
+                        </td>
+                        <td>
+                            
+                                PublishingAdmin
+                            
+                        </td>
+                    </tr>
+                
+                    <tr class="bg-danger">
+                        <td>allBooks</td>
+                        <td>lwc</td>
+                        <td>AuthorController</td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            
+                        </td>
                     </tr>
                 
             </table>
-            
-            <h6 class="text-muted pt-4 text-right">2 triggers processed</h6>
-
-            
-                <div class="mt-5"></div>
-                <h4 class="bg-danger text-white text-center mb-4">Duplicates Detected</h4>
-                <p>The following object + action combinations have more than one trigger defined - the order that these triggers will be invoked in cannot be guaranteed.</p>
-                <table class="table">
-                    <tr>
-                        <th>Object</th>
-                        <th>Action</th>
-                        <th>Triggers</th>
-                    </tr>
-                    
-                        <tr>
-                            <td>Book__c</td>
-                            <td>before insert</td>
-                            <td>Book_ai,Book_au</td>
-                        </tr>
-                    
-                </table>
-            
         </div>
         <div class="pt-3"></div>
 <footer class="footer">
