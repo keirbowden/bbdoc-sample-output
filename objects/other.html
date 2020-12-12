@@ -52,7 +52,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
         <h2>Menu</h2>
         <nav class="nav flex-column">
             
@@ -75,11 +75,12 @@
                 <table class="table table-bordered">
                     <thead class="thead-light">
                         <tr>
-                            <th style="width:17%">Name</th>
-                            <th style="width:15%">Label</th>
+                            <th style="width:15%">Name</th>
+                            <th style="width:13%">Label</th>
                             <th style="width:10%">Type</th>
-                            <th style="width:40%">Description</th>
-                            <th style="width:18%">Info</th>
+                            <th style="width:30%">Description</th>
+                            <th style="width:16%">Info</th>
+                            <th style="width:16%">Page Layouts</th>
                         </tr>
                     </thead>
                     
@@ -89,6 +90,18 @@
                         <td>MultiselectPicklist</td>
                         <td>The genres that the author has written books for.</td>
                         <td><b>Global Value Set (Genre)</b><br/>&nbsp;&nbsp;Fantasy<br/>&nbsp;&nbsp;Science fiction<br/>&nbsp;&nbsp;Horror<br/>&nbsp;&nbsp;Western<br/>&nbsp;&nbsp;Romance<br/>&nbsp;&nbsp;Thriller<br/>&nbsp;&nbsp;Mystery<br/>&nbsp;&nbsp;Detective<br/></td>
+                        <td>
+                                
+                                  Author Layout (<b>Edit</b>)<br/>
+                                  
+                                  <hr/>    
+                                  
+                                
+                                  New Author Layout (<b>Required</b>)<br/>
+                                  
+                                
+                            
+                            </td>
                     </tr>
                     
                     <tr style="background-color: ">
@@ -97,6 +110,18 @@
                         <td>Summary</td>
                         <td>The number of books that this author has written.</td>
                         <td><strong>Roll Up Summary</strong> : count(Book__c.Author__c)</td>
+                        <td>
+                                
+                                  Author Layout (<b>Readonly</b>)<br/>
+                                  
+                                  <hr/>    
+                                  
+                                
+                                  New Author Layout (<b>Readonly</b>)<br/>
+                                  
+                                
+                            
+                            </td>
                     </tr>
                     
                     <tr style="background-color: ">
@@ -105,6 +130,18 @@
                         <td>Lookup</td>
                         <td>The publisher that the author is currently contracted to.</td>
                         <td><strong>Lookup</strong> : Publisher__c</td>
+                        <td>
+                                
+                                  Author Layout (<b>Edit</b>)<br/>
+                                  
+                                  <hr/>    
+                                  
+                                
+                                  New Author Layout (<b>Readonly</b>)<br/>
+                                  
+                                
+                            
+                            </td>
                     </tr>
                     
                 </table>
@@ -123,11 +160,12 @@
                 <table class="table table-bordered">
                     <thead class="thead-light">
                         <tr>
-                            <th style="width:17%">Name</th>
-                            <th style="width:15%">Label</th>
+                            <th style="width:15%">Name</th>
+                            <th style="width:13%">Label</th>
                             <th style="width:10%">Type</th>
-                            <th style="width:40%">Description</th>
-                            <th style="width:18%">Info</th>
+                            <th style="width:30%">Description</th>
+                            <th style="width:16%">Info</th>
+                            <th style="width:16%">Page Layouts</th>
                         </tr>
                     </thead>
                     
@@ -137,6 +175,13 @@
                         <td>MasterDetail</td>
                         <td>The book author.</td>
                         <td><strong>Master-Detail</strong> : Author__c</td>
+                        <td>
+                                
+                                  Book Layout (<b>Required</b>)<br/>
+                                  
+                                
+                            
+                            </td>
                     </tr>
                     
                     <tr style="background-color: ">
@@ -145,6 +190,13 @@
                         <td>Picklist</td>
                         <td>The literary genre of the book.</td>
                         <td><b>Global Value Set (Genre)</b><br/>&nbsp;&nbsp;Fantasy<br/>&nbsp;&nbsp;Science fiction<br/>&nbsp;&nbsp;Horror<br/>&nbsp;&nbsp;Western<br/>&nbsp;&nbsp;Romance<br/>&nbsp;&nbsp;Thriller<br/>&nbsp;&nbsp;Mystery<br/>&nbsp;&nbsp;Detective<br/></td>
+                        <td>
+                                
+                                  Book Layout (<b>Edit</b>)<br/>
+                                  
+                                
+                            
+                            </td>
                     </tr>
                     
                     <tr style="background-color: ">
@@ -153,6 +205,13 @@
                         <td>Number</td>
                         <td>The number of pages in the book.</td>
                         <td></td>
+                        <td>
+                                
+                                  Book Layout (<b>Edit</b>)<br/>
+                                  
+                                
+                            
+                            </td>
                     </tr>
                     
                     <tr style="background-color: ">
@@ -161,6 +220,13 @@
                         <td>Date</td>
                         <td>The year that the book was published</td>
                         <td></td>
+                        <td>
+                                
+                                  Book Layout (<b>Edit</b>)<br/>
+                                  
+                                
+                            
+                            </td>
                     </tr>
                     
                 </table>
@@ -201,11 +267,12 @@
                 <table class="table table-bordered">
                     <thead class="thead-light">
                         <tr>
-                            <th style="width:17%">Name</th>
-                            <th style="width:15%">Label</th>
+                            <th style="width:15%">Name</th>
+                            <th style="width:13%">Label</th>
                             <th style="width:10%">Type</th>
-                            <th style="width:40%">Description</th>
-                            <th style="width:18%">Info</th>
+                            <th style="width:30%">Description</th>
+                            <th style="width:16%">Info</th>
+                            <th style="width:16%">Page Layouts</th>
                         </tr>
                     </thead>
                     
@@ -215,6 +282,13 @@
                         <td>MultiselectPicklist</td>
                         <td>The genres that the publisher deals in.</td>
                         <td><b>Global Value Set (Genre)</b><br/>&nbsp;&nbsp;Fantasy<br/>&nbsp;&nbsp;Science fiction<br/>&nbsp;&nbsp;Horror<br/>&nbsp;&nbsp;Western<br/>&nbsp;&nbsp;Romance<br/>&nbsp;&nbsp;Thriller<br/>&nbsp;&nbsp;Mystery<br/>&nbsp;&nbsp;Detective<br/></td>
+                        <td>
+                                
+                                  Publisher Layout (<b>Edit</b>)<br/>
+                                  
+                                
+                            
+                            </td>
                     </tr>
                     
                     <tr style="background-color: ">
@@ -223,6 +297,13 @@
                         <td>Url</td>
                         <td>The publisher&#39;s web site.</td>
                         <td></td>
+                        <td>
+                                
+                                  Publisher Layout (<b>Edit</b>)<br/>
+                                  
+                                
+                            
+                            </td>
                     </tr>
                     
                 </table>
@@ -234,15 +315,15 @@
     </div>
     <div class="pt-3"></div>
 <footer class="footer">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row justify-content-between">
             <div class="col-6">
-                <p class="text-left"><small class="text-muted">Generated 2020-08-15T07:08:02.297Z</small>
+                <p class="text-left"><small class="text-muted">Generated 2020-12-12T17:51:25.318Z</small>
                 </p>
             </div>
             <div class="col-6">
                 <p class="text-right"><small class="text-muted">Bob Buzzard's Org Documentor
-                        v3.1.0</small></p>
+                        v3.3.0</small></p>
             </div>
         </div>
     </div>
