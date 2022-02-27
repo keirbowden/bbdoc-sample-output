@@ -25,8 +25,8 @@
     }
 
     .doc-header {
-        background-color: #ff8b00; 
-        color: #ffffff;
+        background-color: ; 
+        color: ;
     }
 
     nav .doc-header {
@@ -37,52 +37,47 @@
 
     <body>
         <div class="doc-header">
-            <nav aria-label="breadcrumb" class="container doc-header">
+            <nav aria-label="breadcrumb" class="container">
                 <ol class="breadcrumb doc-header">
                     <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Objects</li>
+                    <li class="breadcrumb-item"><a href="flows.html">Flows</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">All Flows</li>
                 </ol>
-            </nav>    
+            </nav>
             <div class="jumbotron jumbotron-fluid doc-header">
                 <div class="container">
-                    <h1 class="display-4">Objects</h1>
-                    <p class="lead">Custom Objects</p>
+                    <h1 class="display-4">All Flows</h1>
+                    <p class="lead">All flows defined in the example repo</p>
                 </div>
-            </div>
+            </div>            
         </div>
         <div class="container-fluid">
-            <table class="table">
+            <table class="table table-bordered">
                 <tr>
-                    <th>Group</th>
-                    <th>Detail</th>
+                    <th>Name</th>
+                    <th>Object</th>
+                    <th>Actions</th>
+                    <th>Status</th>
+                    <th>API</th>
                 </tr>
                 
                     <tr>
-                        <td>Event Objects</td>
-                        <td><a href="events.html">Click to View</a></td>
+                        <td>Set_Published_Date</td>
+                        <td>Author__c</td>
+                        <td>Create</td>
+                        <td>Active</td>
+                        <td>54</td>
                     </tr>
                 
                     <tr>
-                        <td>Uncategorised Objects</td>
-                        <td><a href="other.html">Click to View</a></td>
+                        <td>Update_New_Author</td>
+                        <td>Author__c</td>
+                        <td>Create</td>
+                        <td>Active</td>
+                        <td>54</td>
                     </tr>
                 
             </table>
-            <h6 class="text-muted pt-4 text-right">5 objects processed</h6>
-            
-                <div class="mt-5"></div>
-                <h4 class="bg-warning text-center mb-4">Missing Descriptions</h4>
-                <p>The following fields are missing descriptions:</p>
-                <ol>
-                    
-                        <li>Book_Signing__c.Ends__c</li>
-                    
-                        <li>Book_Signing__c.Starts__c</li>
-                    
-                        <li>Author__c.Planned_Publish_Date__c</li>
-                                    
-                </ol>
-                    
         </div>
         <div class="pt-3"></div>
 <footer class="footer">

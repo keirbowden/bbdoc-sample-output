@@ -1,0 +1,851 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <style>
+    html {
+        position: relative;
+        min-height: 100%;
+    }
+
+    body {
+        /* Margin bottom by footer height */
+        margin-bottom: 60px;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        /* Set the fixed height of the footer here */
+        height: 60px;
+        line-height: 60px;
+        /* Vertically center the text there */
+        background-color: #f5f5f5;
+    }
+
+    .doc-header {
+        background-color: #c9a9d6; 
+        color: #01010c;
+    }
+
+    nav .doc-header {
+        margin-bottom: -2em;
+    }
+</style>
+    </head>
+
+    <body>
+        <div class="doc-header">
+            <nav aria-label="breadcrumb" class="container">
+                <ol class="breadcrumb doc-header">
+                    <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="orderofexecution.html">Order of Execution</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Author__c</li>
+                </ol>
+            </nav>
+            <div class="jumbotron jumbotron-fluid doc-header">
+                <div class="container">
+                    <h1 class="display-4">Author__c</h1>
+                    <p class="lead">Order of execution</p>
+                </div>
+            </div>            
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                
+                <div class="col-3">
+                    
+                        <i><a href="#step1" class="text-info">1. Load Record</a></i>
+                    
+                </div>
+                <div class="col-1">
+                    
+                        <span class="badge badge-pill badge-danger">not available</span> 
+                    
+                </div>
+                <div class="col-8">
+                </div>
+            
+                <div class="col-3">
+                    
+                        <i><a href="#step2" class="text-info">2. Overwrite Values</a></i>
+                    
+                </div>
+                <div class="col-1">
+                    
+                        <span class="badge  badge-pill badge-warning">not implemented</span> 
+                    
+                </div>
+                <div class="col-8">
+                </div>
+            
+                <div class="col-3">
+                    
+                    <b><a href="#step3">3. Before save flows</a></b>
+                    <span class="badge badge-pill badge-info">2</span> 
+                    
+                </div>
+                <div class="col-1">
+                    
+                </div>
+                <div class="col-8">
+                </div>
+            
+                <div class="col-3">
+                    
+                        <i><a href="#step4" class="text-info">4. Before triggers</a></i>
+                    
+                </div>
+                <div class="col-1">
+                    
+                </div>
+                <div class="col-8">
+                </div>
+            
+                <div class="col-3">
+                    
+                        <i><a href="#step5" class="text-info">5. System validation</a></i>
+                    
+                </div>
+                <div class="col-1">
+                    
+                </div>
+                <div class="col-8">
+                </div>
+            
+                <div class="col-3">
+                    
+                        <i><a href="#step6" class="text-info">6. Duplicate rules</a></i>
+                    
+                </div>
+                <div class="col-1">
+                    
+                        <span class="badge  badge-pill badge-warning">not implemented</span> 
+                    
+                </div>
+                <div class="col-8">
+                </div>
+            
+                <div class="col-3">
+                    
+                        <i><a href="#step7" class="text-info">7. Save but not commit</a></i>
+                    
+                </div>
+                <div class="col-1">
+                    
+                        <span class="badge badge-pill badge-danger">not available</span> 
+                    
+                </div>
+                <div class="col-8">
+                </div>
+            
+                <div class="col-3">
+                    
+                        <i><a href="#step8" class="text-info">8. After triggers</a></i>
+                    
+                </div>
+                <div class="col-1">
+                    
+                </div>
+                <div class="col-8">
+                </div>
+            
+                <div class="col-3">
+                    
+                        <i><a href="#step9" class="text-info">9. Assignment Rules</a></i>
+                    
+                </div>
+                <div class="col-1">
+                    
+                        <span class="badge  badge-pill badge-warning">not implemented</span> 
+                    
+                </div>
+                <div class="col-8">
+                </div>
+            
+                <div class="col-3">
+                    
+                        <i><a href="#step10" class="text-info">10. Auto-response Rules</a></i>
+                    
+                </div>
+                <div class="col-1">
+                    
+                        <span class="badge  badge-pill badge-warning">not implemented</span> 
+                    
+                </div>
+                <div class="col-8">
+                </div>
+            
+                <div class="col-3">
+                    
+                        <i><a href="#step11" class="text-info">11. Workflow Rules</a></i>
+                    
+                </div>
+                <div class="col-1">
+                    
+                        <span class="badge  badge-pill badge-warning">not implemented</span> 
+                    
+                </div>
+                <div class="col-8">
+                </div>
+            
+                <div class="col-3">
+                    
+                        <i><a href="#step12" class="text-info">12. Escalation Rules</a></i>
+                    
+                </div>
+                <div class="col-1">
+                    
+                        <span class="badge  badge-pill badge-warning">not implemented</span> 
+                    
+                </div>
+                <div class="col-8">
+                </div>
+            
+                <div class="col-3">
+                    
+                        <i><a href="#step13" class="text-info">13. Flow Automations</a></i>
+                    
+                </div>
+                <div class="col-1">
+                    
+                        <span class="badge  badge-pill badge-warning">not implemented</span> 
+                    
+                </div>
+                <div class="col-8">
+                </div>
+            
+                <div class="col-3">
+                    
+                        <i><a href="#step14" class="text-info">14. Entitlement Rules</a></i>
+                    
+                </div>
+                <div class="col-1">
+                    
+                        <span class="badge  badge-pill badge-warning">not implemented</span> 
+                    
+                </div>
+                <div class="col-8">
+                </div>
+            
+                <div class="col-3">
+                    
+                        <i><a href="#step15" class="text-info">15. After Save Flows</a></i>
+                    
+                </div>
+                <div class="col-1">
+                    
+                </div>
+                <div class="col-8">
+                </div>
+            
+                <div class="col-3">
+                    
+                        <i><a href="#step16" class="text-info">16. Roll Up Summaries</a></i>
+                    
+                </div>
+                <div class="col-1">
+                    
+                </div>
+                <div class="col-8">
+                </div>
+            
+                <div class="col-3">
+                    
+                        <i><a href="#step17" class="text-info">17. Parent Roll Up Summaries</a></i>
+                    
+                </div>
+                <div class="col-1">
+                    
+                        <span class="badge  badge-pill badge-warning">not implemented</span> 
+                    
+                </div>
+                <div class="col-8">
+                </div>
+            
+                <div class="col-3">
+                    
+                        <i><a href="#step18" class="text-info">18. Criteria based sharing</a></i>
+                    
+                </div>
+                <div class="col-1">
+                    
+                        <span class="badge  badge-pill badge-warning">not implemented</span> 
+                    
+                </div>
+                <div class="col-8">
+                </div>
+            
+                <div class="col-3">
+                    
+                        <i><a href="#step19" class="text-info">19. Commit</a></i>
+                    
+                </div>
+                <div class="col-1">
+                    
+                        <span class="badge badge-pill badge-danger">not available</span> 
+                    
+                </div>
+                <div class="col-8">
+                </div>
+            
+                <div class="col-3">
+                    
+                        <i><a href="#step20" class="text-info">20. Post Commit</a></i>
+                    
+                </div>
+                <div class="col-1">
+                    
+                        <span class="badge badge-pill badge-danger">not available</span> 
+                    
+                </div>
+                <div class="col-8">
+                </div>
+            
+
+        </div>
+
+            <br/>
+            
+                <div class="card mb-4" style="width: 100%">
+                    <div class="card-header">
+                        <b><a name="step1"> 1. Load Record</a></b>
+                        
+                    </div>
+                    <div class="card-body">
+                        <div class="container">
+                            <div class="row">
+                              <div class="col-sm">
+                                 
+                                        <p class="alert alert-danger">This step is not available for automation</p>
+                                
+                              </div>
+                              <div class="col-sm">
+                                <details class="mb-3">
+                                    <summary>Description</summary>
+                                    <p>Loads the original record from the database or initializes the record for an upsert statement.</p>
+            
+                                  </details>
+                              </div>
+                            </div>
+                          </div>                        
+                    </div>
+                </div>
+            
+                <div class="card mb-4" style="width: 100%">
+                    <div class="card-header">
+                        <b><a name="step2"> 2. Overwrite Values</a></b>
+                        
+                    </div>
+                    <div class="card-body">
+                        <div class="container">
+                            <div class="row">
+                              <div class="col-sm">
+                                 
+                                        <p class="alert alert-warning">Not yet implemented in the Org Documentor. </p>
+                                
+                              </div>
+                              <div class="col-sm">
+                                <details class="mb-3">
+                                    <summary>Description</summary>
+                                    <p>Loads the new record field values from the request and overwrites the old values.<br/>If the request came from a standard UI edit page, Salesforce runs system validation to check the record for:<br/><ul><li>Compliance with layout-specific rules</li><li>Required values at the layout level and field-definition level</li><li>Valid field formats</li><li>Maximum field length</li></ul> When the request comes from other sources, such as an Apex application or a SOAP API call, Salesforce validates only the foreign keys. Before executing a trigger, Salesforce verifies that any custom foreign keys do not refer to the object itself.<br/> Salesforce runs custom validation rules if multiline items were created, such as quote line items and opportunity line items.</p>
+            
+                                  </details>
+                              </div>
+                            </div>
+                          </div>                        
+                    </div>
+                </div>
+            
+                <div class="card mb-4" style="width: 100%">
+                    <div class="card-header">
+                        <b><a name="step3"> 3. Before save flows</a></b>
+                        
+                            <span class="badge  badge-pill badge-success">ordered</span> 
+                        
+                    </div>
+                    <div class="card-body">
+                        <div class="container">
+                            <div class="row">
+                              <div class="col-sm">
+                                 
+                                        <div>
+                                            <div>
+                                                
+                                                    <b>3.</b>&nbsp;
+                                                
+                                                Set_Published_Date
+                                            </div>
+                                        </div>        
+                                    
+                                        <div>
+                                            <div>
+                                                
+                                                    <b>5.</b>&nbsp;
+                                                
+                                                Update_New_Author
+                                            </div>
+                                        </div>        
+                                    
+                              </div>
+                              <div class="col-sm">
+                                <details class="mb-3">
+                                    <summary>Description</summary>
+                                    <p>Executes record-triggered flows that are configured to run before the record is saved.</p>
+            
+                                  </details>
+                              </div>
+                            </div>
+                          </div>                        
+                    </div>
+                </div>
+            
+                <div class="card mb-4" style="width: 100%">
+                    <div class="card-header">
+                        <b><a name="step4"> 4. Before triggers</a></b>
+                        
+                    </div>
+                    <div class="card-body">
+                        <div class="container">
+                            <div class="row">
+                              <div class="col-sm">
+                                 
+                                        <div class="text-primary"><i>No automation steps defined.</i></div>
+                                
+                              </div>
+                              <div class="col-sm">
+                                <details class="mb-3">
+                                    <summary>Description</summary>
+                                    <p>Executes all before triggers.</p>
+            
+                                  </details>
+                              </div>
+                            </div>
+                          </div>                        
+                    </div>
+                </div>
+            
+                <div class="card mb-4" style="width: 100%">
+                    <div class="card-header">
+                        <b><a name="step5"> 5. System validation</a></b>
+                        
+                    </div>
+                    <div class="card-body">
+                        <div class="container">
+                            <div class="row">
+                              <div class="col-sm">
+                                 
+                                        <div class="text-primary"><i>No automation steps defined.</i></div>
+                                
+                              </div>
+                              <div class="col-sm">
+                                <details class="mb-3">
+                                    <summary>Description</summary>
+                                    <p>Runs most system validation steps again, such as verifying that all required fields have a non-null value, and runs any custom validation rules. The only system validation that Salesforce doesn't run a second time (when the request comes from a standard UI edit page) is the enforcement of layout-specific rules.</p>
+            
+                                  </details>
+                              </div>
+                            </div>
+                          </div>                        
+                    </div>
+                </div>
+            
+                <div class="card mb-4" style="width: 100%">
+                    <div class="card-header">
+                        <b><a name="step6"> 6. Duplicate rules</a></b>
+                        
+                    </div>
+                    <div class="card-body">
+                        <div class="container">
+                            <div class="row">
+                              <div class="col-sm">
+                                 
+                                        <p class="alert alert-warning">Not yet implemented in the Org Documentor. </p>
+                                
+                              </div>
+                              <div class="col-sm">
+                                <details class="mb-3">
+                                    <summary>Description</summary>
+                                    <p>Executes duplicate rules. If the duplicate rule identifies the record as a duplicate and uses the block action, the record is not saved and no further steps, such as after triggers and workflow rules, are taken.</p>
+            
+                                  </details>
+                              </div>
+                            </div>
+                          </div>                        
+                    </div>
+                </div>
+            
+                <div class="card mb-4" style="width: 100%">
+                    <div class="card-header">
+                        <b><a name="step7"> 7. Save but not commit</a></b>
+                        
+                    </div>
+                    <div class="card-body">
+                        <div class="container">
+                            <div class="row">
+                              <div class="col-sm">
+                                 
+                                        <p class="alert alert-danger">This step is not available for automation</p>
+                                
+                              </div>
+                              <div class="col-sm">
+                                <details class="mb-3">
+                                    <summary>Description</summary>
+                                    <p>Saves the record to the database, but doesn't commit yet.</p>
+            
+                                  </details>
+                              </div>
+                            </div>
+                          </div>                        
+                    </div>
+                </div>
+            
+                <div class="card mb-4" style="width: 100%">
+                    <div class="card-header">
+                        <b><a name="step8"> 8. After triggers</a></b>
+                        
+                    </div>
+                    <div class="card-body">
+                        <div class="container">
+                            <div class="row">
+                              <div class="col-sm">
+                                 
+                                        <div class="text-primary"><i>No automation steps defined.</i></div>
+                                
+                              </div>
+                              <div class="col-sm">
+                                <details class="mb-3">
+                                    <summary>Description</summary>
+                                    <p>Executes all after triggers.</p>
+            
+                                  </details>
+                              </div>
+                            </div>
+                          </div>                        
+                    </div>
+                </div>
+            
+                <div class="card mb-4" style="width: 100%">
+                    <div class="card-header">
+                        <b><a name="step9"> 9. Assignment Rules</a></b>
+                        
+                    </div>
+                    <div class="card-body">
+                        <div class="container">
+                            <div class="row">
+                              <div class="col-sm">
+                                 
+                                        <p class="alert alert-warning">Not yet implemented in the Org Documentor. </p>
+                                
+                              </div>
+                              <div class="col-sm">
+                                <details class="mb-3">
+                                    <summary>Description</summary>
+                                    <p>Executes assignment rules.</p>
+            
+                                  </details>
+                              </div>
+                            </div>
+                          </div>                        
+                    </div>
+                </div>
+            
+                <div class="card mb-4" style="width: 100%">
+                    <div class="card-header">
+                        <b><a name="step10"> 10. Auto-response Rules</a></b>
+                        
+                    </div>
+                    <div class="card-body">
+                        <div class="container">
+                            <div class="row">
+                              <div class="col-sm">
+                                 
+                                        <p class="alert alert-warning">Not yet implemented in the Org Documentor. </p>
+                                
+                              </div>
+                              <div class="col-sm">
+                                <details class="mb-3">
+                                    <summary>Description</summary>
+                                    <p>Executes auto-response rules.</p>
+            
+                                  </details>
+                              </div>
+                            </div>
+                          </div>                        
+                    </div>
+                </div>
+            
+                <div class="card mb-4" style="width: 100%">
+                    <div class="card-header">
+                        <b><a name="step11"> 11. Workflow Rules</a></b>
+                        
+                    </div>
+                    <div class="card-body">
+                        <div class="container">
+                            <div class="row">
+                              <div class="col-sm">
+                                 
+                                        <p class="alert alert-warning">Not yet implemented in the Org Documentor. </p>
+                                
+                              </div>
+                              <div class="col-sm">
+                                <details class="mb-3">
+                                    <summary>Description</summary>
+                                    <p>Executes workflow rules. If there are workflow field updates:<br/><ul><li>Updates the record again.</li><li>Runs system validations again. Custom validation rules, flows, duplicate rules, processes, and escalation rules are not run again.</li><li>Executes before update triggers and after update triggers, regardless of the record operation (insert or update), one more time (and only one more time)</li></ul></p>
+            
+                                  </details>
+                              </div>
+                            </div>
+                          </div>                        
+                    </div>
+                </div>
+            
+                <div class="card mb-4" style="width: 100%">
+                    <div class="card-header">
+                        <b><a name="step12"> 12. Escalation Rules</a></b>
+                        
+                    </div>
+                    <div class="card-body">
+                        <div class="container">
+                            <div class="row">
+                              <div class="col-sm">
+                                 
+                                        <p class="alert alert-warning">Not yet implemented in the Org Documentor. </p>
+                                
+                              </div>
+                              <div class="col-sm">
+                                <details class="mb-3">
+                                    <summary>Description</summary>
+                                    <p>Executes escalation rules.</p>
+            
+                                  </details>
+                              </div>
+                            </div>
+                          </div>                        
+                    </div>
+                </div>
+            
+                <div class="card mb-4" style="width: 100%">
+                    <div class="card-header">
+                        <b><a name="step13"> 13. Flow Automations</a></b>
+                        
+                    </div>
+                    <div class="card-body">
+                        <div class="container">
+                            <div class="row">
+                              <div class="col-sm">
+                                 
+                                        <p class="alert alert-warning">Not yet implemented in the Org Documentor. </p>
+                                
+                              </div>
+                              <div class="col-sm">
+                                <details class="mb-3">
+                                    <summary>Description</summary>
+                                    <p>Executes the following Salesforce Flow automations, but not in a guaranteed order.<br/><ul><li>Processes</li><li>Flows launched by processes</li><li>Flows launched by workflow rules (flow trigger workflow actions pilot)</li><li>When a process or flow executes a DML operation, the affected record goes through the save procedure.</li></ul></p>
+            
+                                  </details>
+                              </div>
+                            </div>
+                          </div>                        
+                    </div>
+                </div>
+            
+                <div class="card mb-4" style="width: 100%">
+                    <div class="card-header">
+                        <b><a name="step14"> 14. Entitlement Rules</a></b>
+                        
+                    </div>
+                    <div class="card-body">
+                        <div class="container">
+                            <div class="row">
+                              <div class="col-sm">
+                                 
+                                        <p class="alert alert-warning">Not yet implemented in the Org Documentor. </p>
+                                
+                              </div>
+                              <div class="col-sm">
+                                <details class="mb-3">
+                                    <summary>Description</summary>
+                                    <p>Executes entitlement rules</p>
+            
+                                  </details>
+                              </div>
+                            </div>
+                          </div>                        
+                    </div>
+                </div>
+            
+                <div class="card mb-4" style="width: 100%">
+                    <div class="card-header">
+                        <b><a name="step15"> 15. After Save Flows</a></b>
+                        
+                            <span class="badge  badge-pill badge-success">ordered</span> 
+                        
+                    </div>
+                    <div class="card-body">
+                        <div class="container">
+                            <div class="row">
+                              <div class="col-sm">
+                                 
+                                        <div class="text-primary"><i>No automation steps defined.</i></div>
+                                
+                              </div>
+                              <div class="col-sm">
+                                <details class="mb-3">
+                                    <summary>Description</summary>
+                                    <p> Executes record-triggered flows that are configured to run after the record is saved.</p>
+            
+                                  </details>
+                              </div>
+                            </div>
+                          </div>                        
+                    </div>
+                </div>
+            
+                <div class="card mb-4" style="width: 100%">
+                    <div class="card-header">
+                        <b><a name="step16"> 16. Roll Up Summaries</a></b>
+                        
+                    </div>
+                    <div class="card-body">
+                        <div class="container">
+                            <div class="row">
+                              <div class="col-sm">
+                                 
+                                        <div class="text-primary"><i>No automation steps defined.</i></div>
+                                
+                                    <p class="alert alert-warning">Partially implemented - roll-up summary fields are processed, but not cross-object workflow.</p>
+                                
+                              </div>
+                              <div class="col-sm">
+                                <details class="mb-3">
+                                    <summary>Description</summary>
+                                    <p>If the record contains a roll-up summary field or is part of a cross-object workflow, performs calculations and updates the roll-up summary field in the parent record. Parent record goes through save procedure.</p>
+            
+                                  </details>
+                              </div>
+                            </div>
+                          </div>                        
+                    </div>
+                </div>
+            
+                <div class="card mb-4" style="width: 100%">
+                    <div class="card-header">
+                        <b><a name="step17"> 17. Parent Roll Up Summaries</a></b>
+                        
+                    </div>
+                    <div class="card-body">
+                        <div class="container">
+                            <div class="row">
+                              <div class="col-sm">
+                                 
+                                        <p class="alert alert-warning">Not yet implemented in the Org Documentor. </p>
+                                
+                              </div>
+                              <div class="col-sm">
+                                <details class="mb-3">
+                                    <summary>Description</summary>
+                                    <p>If the parent record is updated, and a grandparent record contains a roll-up summary field or is part of a cross-object workflow, performs calculations and updates the roll-up summary field in the grandparent record. Grandparent record goes through save procedure.</p>
+            
+                                  </details>
+                              </div>
+                            </div>
+                          </div>                        
+                    </div>
+                </div>
+            
+                <div class="card mb-4" style="width: 100%">
+                    <div class="card-header">
+                        <b><a name="step18"> 18. Criteria based sharing</a></b>
+                        
+                    </div>
+                    <div class="card-body">
+                        <div class="container">
+                            <div class="row">
+                              <div class="col-sm">
+                                 
+                                        <p class="alert alert-warning">Not yet implemented in the Org Documentor. </p>
+                                
+                              </div>
+                              <div class="col-sm">
+                                <details class="mb-3">
+                                    <summary>Description</summary>
+                                    <p>Executes Criteria Based Sharing evaluation</p>
+            
+                                  </details>
+                              </div>
+                            </div>
+                          </div>                        
+                    </div>
+                </div>
+            
+                <div class="card mb-4" style="width: 100%">
+                    <div class="card-header">
+                        <b><a name="step19"> 19. Commit</a></b>
+                        
+                    </div>
+                    <div class="card-body">
+                        <div class="container">
+                            <div class="row">
+                              <div class="col-sm">
+                                 
+                                        <p class="alert alert-danger">This step is not available for automation</p>
+                                
+                              </div>
+                              <div class="col-sm">
+                                <details class="mb-3">
+                                    <summary>Description</summary>
+                                    <p>Commits all DML operations to the database</p>
+            
+                                  </details>
+                              </div>
+                            </div>
+                          </div>                        
+                    </div>
+                </div>
+            
+                <div class="card mb-4" style="width: 100%">
+                    <div class="card-header">
+                        <b><a name="step20"> 20. Post Commit</a></b>
+                        
+                    </div>
+                    <div class="card-body">
+                        <div class="container">
+                            <div class="row">
+                              <div class="col-sm">
+                                 
+                                        <p class="alert alert-danger">This step is not available for automation</p>
+                                
+                              </div>
+                              <div class="col-sm">
+                                <details class="mb-3">
+                                    <summary>Description</summary>
+                                    <p>After the changes are committed to the database, executes post-commit logic such as sending email and executing enqueued asynchronous Apex jobs, including queueable jobs and future methods.</p>
+            
+                                  </details>
+                              </div>
+                            </div>
+                          </div>                        
+                    </div>
+                </div>
+            
+        </div>
+        <div class="pt-3"></div>
+<footer class="footer">
+    <div class="container-fluid">
+        <div class="row justify-content-between">
+            <div class="col-6">
+                <p class="text-left"><small class="text-muted">Generated 2022-02-27T12:09:38.227Z</small>
+                </p>
+            </div>
+            <div class="col-6">
+                <p class="text-right"><small class="text-muted">Bob Buzzard's Org Documentor
+                        v4.0.1</small></p>
+            </div>
+        </div>
+    </div>
+</footer>
+    </body>
+
+</html>
