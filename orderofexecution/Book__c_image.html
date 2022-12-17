@@ -33,6 +33,70 @@
         margin-bottom: -2em;
     }
 </style>
+        <style>
+:root {
+    --blue: #74bcdd;
+    --dark-blue: #2d3e51;
+    --red: #f74442;
+    --yellow: #fbca32;
+    --green: #5be95b;
+    --grey: #ebeced;
+  }
+  
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+  }
+  
+  
+  main {
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+  }
+  
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  area {
+    outline: 5px solid var(--red);
+  }
+  
+  .popup {
+    /*background-color: rgba(100, 100, 100, 0.9);*/
+    background-color: rgba(255, 255, 255, 1.0);
+    /*color: white; 
+    /*font-weight: 100;
+    font-size: 14px;*/
+    min-width:1180px;
+    max-width:1180px;
+    position: absolute;
+    top: 825px;
+    opacity: 0;
+    border: black solid 2px;
+    transform: scale(0);
+    transition: opacity 300ms, transform 300ms;
+  }
+  
+  .popup:target {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .popup > .close {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    background-color: black;
+    padding: 4px 10px;
+  }
+</style>
     </head>
 
     <body>
@@ -41,271 +105,38 @@
                 <ol class="breadcrumb doc-header">
                     <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
                     <li class="breadcrumb-item"><a href="orderofexecution.html">Order of Execution</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Book_Signing__c</li>
+                    <li class="breadcrumb-item active" aria-current="page">Book__c</li>
                 </ol>
             </nav>
             <div class="jumbotron jumbotron-fluid doc-header">
                 <div class="container">
-                    <h1 class="display-4">Book_Signing__c</h1>
+                    <h1 class="display-4">Book__c</h1>
                     <p class="lead">Order of execution</p>
                 </div>
             </div>            
         </div>
         <div class="container-fluid">
-            <div class="row">
-                
-                <div class="col-3">
-                    
-                        <i><a href="#step1" class="text-info">1. Load Record</a></i>
-                    
-                </div>
-                <div class="col-1">
-                    
-                        <span class="badge badge-pill badge-danger">not available</span> 
-                    
-                </div>
-                <div class="col-8">
-                </div>
-            
-                <div class="col-3">
-                    
-                        <i><a href="#step2" class="text-info">2. Overwrite Values</a></i>
-                    
-                </div>
-                <div class="col-1">
-                    
-                        <span class="badge  badge-pill badge-warning">not implemented</span> 
-                    
-                </div>
-                <div class="col-8">
-                </div>
-            
-                <div class="col-3">
-                    
-                        <i><a href="#step3" class="text-info">3. Before save flows</a></i>
-                    
-                </div>
-                <div class="col-1">
-                    
-                </div>
-                <div class="col-8">
-                </div>
-            
-                <div class="col-3">
-                    
-                        <i><a href="#step4" class="text-info">4. Before triggers</a></i>
-                    
-                </div>
-                <div class="col-1">
-                    
-                </div>
-                <div class="col-8">
-                </div>
-            
-                <div class="col-3">
-                    
-                        <i><a href="#step5" class="text-info">5. System validation</a></i>
-                    
-                </div>
-                <div class="col-1">
-                    
-                </div>
-                <div class="col-8">
-                </div>
-            
-                <div class="col-3">
-                    
-                        <i><a href="#step6" class="text-info">6. Duplicate rules</a></i>
-                    
-                </div>
-                <div class="col-1">
-                    
-                </div>
-                <div class="col-8">
-                </div>
-            
-                <div class="col-3">
-                    
-                        <i><a href="#step7" class="text-info">7. Save but not commit</a></i>
-                    
-                </div>
-                <div class="col-1">
-                    
-                        <span class="badge badge-pill badge-danger">not available</span> 
-                    
-                </div>
-                <div class="col-8">
-                </div>
-            
-                <div class="col-3">
-                    
-                        <i><a href="#step8" class="text-info">8. After triggers</a></i>
-                    
-                </div>
-                <div class="col-1">
-                    
-                </div>
-                <div class="col-8">
-                </div>
-            
-                <div class="col-3">
-                    
-                        <i><a href="#step9" class="text-info">9. Assignment Rules</a></i>
-                    
-                </div>
-                <div class="col-1">
-                    
-                        <span class="badge  badge-pill badge-warning">not implemented</span> 
-                    
-                </div>
-                <div class="col-8">
-                </div>
-            
-                <div class="col-3">
-                    
-                        <i><a href="#step10" class="text-info">10. Auto-response Rules</a></i>
-                    
-                </div>
-                <div class="col-1">
-                    
-                        <span class="badge  badge-pill badge-warning">not implemented</span> 
-                    
-                </div>
-                <div class="col-8">
-                </div>
-            
-                <div class="col-3">
-                    
-                        <i><a href="#step11" class="text-info">11. Workflow Rules</a></i>
-                    
-                </div>
-                <div class="col-1">
-                    
-                        <span class="badge  badge-pill badge-warning">not implemented</span> 
-                    
-                </div>
-                <div class="col-8">
-                </div>
-            
-                <div class="col-3">
-                    
-                        <i><a href="#step12" class="text-info">12. Escalation Rules</a></i>
-                    
-                </div>
-                <div class="col-1">
-                    
-                        <span class="badge  badge-pill badge-warning">not implemented</span> 
-                    
-                </div>
-                <div class="col-8">
-                </div>
-            
-                <div class="col-3">
-                    
-                        <i><a href="#step13" class="text-info">13. Flow Automations</a></i>
-                    
-                </div>
-                <div class="col-1">
-                    
-                        <span class="badge  badge-pill badge-warning">not implemented</span> 
-                    
-                </div>
-                <div class="col-8">
-                </div>
-            
-                <div class="col-3">
-                    
-                        <i><a href="#step14" class="text-info">14. After Save Flows</a></i>
-                    
-                </div>
-                <div class="col-1">
-                    
-                </div>
-                <div class="col-8">
-                </div>
-            
-                <div class="col-3">
-                    
-                        <i><a href="#step15" class="text-info">15. Entitlement Rules</a></i>
-                    
-                </div>
-                <div class="col-1">
-                    
-                        <span class="badge  badge-pill badge-warning">not implemented</span> 
-                    
-                </div>
-                <div class="col-8">
-                </div>
-            
-                <div class="col-3">
-                    
-                        <i><a href="#step16" class="text-info">16. Roll Up Summaries</a></i>
-                    
-                </div>
-                <div class="col-1">
-                    
-                </div>
-                <div class="col-8">
-                </div>
-            
-                <div class="col-3">
-                    
-                        <i><a href="#step17" class="text-info">17. Parent Roll Up Summaries</a></i>
-                    
-                </div>
-                <div class="col-1">
-                    
-                        <span class="badge  badge-pill badge-warning">not implemented</span> 
-                    
-                </div>
-                <div class="col-8">
-                </div>
-            
-                <div class="col-3">
-                    
-                        <i><a href="#step18" class="text-info">18. Criteria based sharing</a></i>
-                    
-                </div>
-                <div class="col-1">
-                    
-                        <span class="badge  badge-pill badge-warning">not implemented</span> 
-                    
-                </div>
-                <div class="col-8">
-                </div>
-            
-                <div class="col-3">
-                    
-                        <i><a href="#step19" class="text-info">19. Commit</a></i>
-                    
-                </div>
-                <div class="col-1">
-                    
-                        <span class="badge badge-pill badge-danger">not available</span> 
-                    
-                </div>
-                <div class="col-8">
-                </div>
-            
-                <div class="col-3">
-                    
-                        <i><a href="#step20" class="text-info">20. Post Commit</a></i>
-                    
-                </div>
-                <div class="col-1">
-                    
-                        <span class="badge badge-pill badge-danger">not available</span> 
-                    
-                </div>
-                <div class="col-8">
-                </div>
-            
 
-        </div>
-
-            <br/>
+            <div>
+            <main>
+                <img src="https://architect.salesforce.com/1/asset/immutable/s/e6cf2ac/assets/images/Salesforce-Order-Of-Execution-Diagram.png" width="1500" height="1013" usemap="#ooe-steps" />
+                <map name="ooe-steps">
+s                  <area alt="Before Save Flows" 
+                  title="Before Save Flows" 
+                  href="#ooe-3" 
+                  coords="926,265,1078,318"
+                  shape="rect">
+                  <area alt="Before Triggers" title="Before Triggers" href="#ooe-4" coords="1107,267,1258,318" shape="rect">
+                  <area alt="System Validation" title="System Validation" href="#ooe-5" coords="1283,265,1439,424" shape="rect">
+                  <area alt="Duplicate Rules" title="Duplicate Rules" href="#ooe-6" coords="1285,495,1437,540" shape="rect">
+                  <area alt="After Triggers" title="After Triggers" href="#ooe-8" coords="830,491,978,543" shape="rect">
+                  <area alt="After Save Flows" title="After Save Flows" href="#ooe-14" coords="469,675,619,722" shape="rect">
+                  <area alt="Roll Up Summaries" title="Roll Up Summaries" href="#ooe-16" coords="570,899,717,991" shape="rect">
+            </map>
+          
             
-                <div class="card mb-4" style="width: 100%">
+                <div class="popup" id="ooe-1">
+                  <div class="card mb-4" style="width: 100%">
                     <div class="card-header">
                         <b><a name="step1"> 1. Load Record</a></b>
                         
@@ -326,11 +157,14 @@
                                   </details>
                               </div>
                             </div>
+                            <a href="#" class="btn btn-primary">Close</a>
                           </div>                        
                     </div>
                 </div>
+            </div>
             
-                <div class="card mb-4" style="width: 100%">
+                <div class="popup" id="ooe-2">
+                  <div class="card mb-4" style="width: 100%">
                     <div class="card-header">
                         <b><a name="step2"> 2. Overwrite Values</a></b>
                         
@@ -351,11 +185,14 @@
                                   </details>
                               </div>
                             </div>
+                            <a href="#" class="btn btn-primary">Close</a>
                           </div>                        
                     </div>
                 </div>
+            </div>
             
-                <div class="card mb-4" style="width: 100%">
+                <div class="popup" id="ooe-3">
+                  <div class="card mb-4" style="width: 100%">
                     <div class="card-header">
                         <b><a name="step3"> 3. Before save flows</a></b>
                         
@@ -378,11 +215,14 @@
                                   </details>
                               </div>
                             </div>
+                            <a href="#" class="btn btn-primary">Close</a>
                           </div>                        
                     </div>
                 </div>
+            </div>
             
-                <div class="card mb-4" style="width: 100%">
+                <div class="popup" id="ooe-4">
+                  <div class="card mb-4" style="width: 100%">
                     <div class="card-header">
                         <b><a name="step4"> 4. Before triggers</a></b>
                         
@@ -403,11 +243,14 @@
                                   </details>
                               </div>
                             </div>
+                            <a href="#" class="btn btn-primary">Close</a>
                           </div>                        
                     </div>
                 </div>
+            </div>
             
-                <div class="card mb-4" style="width: 100%">
+                <div class="popup" id="ooe-5">
+                  <div class="card mb-4" style="width: 100%">
                     <div class="card-header">
                         <b><a name="step5"> 5. System validation</a></b>
                         
@@ -428,11 +271,14 @@
                                   </details>
                               </div>
                             </div>
+                            <a href="#" class="btn btn-primary">Close</a>
                           </div>                        
                     </div>
                 </div>
+            </div>
             
-                <div class="card mb-4" style="width: 100%">
+                <div class="popup" id="ooe-6">
+                  <div class="card mb-4" style="width: 100%">
                     <div class="card-header">
                         <b><a name="step6"> 6. Duplicate rules</a></b>
                         
@@ -455,11 +301,14 @@
                                   </details>
                               </div>
                             </div>
+                            <a href="#" class="btn btn-primary">Close</a>
                           </div>                        
                     </div>
                 </div>
+            </div>
             
-                <div class="card mb-4" style="width: 100%">
+                <div class="popup" id="ooe-7">
+                  <div class="card mb-4" style="width: 100%">
                     <div class="card-header">
                         <b><a name="step7"> 7. Save but not commit</a></b>
                         
@@ -480,11 +329,14 @@
                                   </details>
                               </div>
                             </div>
+                            <a href="#" class="btn btn-primary">Close</a>
                           </div>                        
                     </div>
                 </div>
+            </div>
             
-                <div class="card mb-4" style="width: 100%">
+                <div class="popup" id="ooe-8">
+                  <div class="card mb-4" style="width: 100%">
                     <div class="card-header">
                         <b><a name="step8"> 8. After triggers</a></b>
                         
@@ -494,8 +346,20 @@
                             <div class="row">
                               <div class="col-sm">
                                  
-                                        <div class="text-primary"><i>No automation steps defined.</i></div>
-                                
+                                        <div>
+                                            <div>
+                                                
+                                                Book_ai
+                                            </div>
+                                        </div>        
+                                    
+                                        <div>
+                                            <div>
+                                                
+                                                Book_au
+                                            </div>
+                                        </div>        
+                                    
                               </div>
                               <div class="col-sm">
                                 <details class="mb-3">
@@ -505,11 +369,14 @@
                                   </details>
                               </div>
                             </div>
+                            <a href="#" class="btn btn-primary">Close</a>
                           </div>                        
                     </div>
                 </div>
+            </div>
             
-                <div class="card mb-4" style="width: 100%">
+                <div class="popup" id="ooe-9">
+                  <div class="card mb-4" style="width: 100%">
                     <div class="card-header">
                         <b><a name="step9"> 9. Assignment Rules</a></b>
                         
@@ -530,11 +397,14 @@
                                   </details>
                               </div>
                             </div>
+                            <a href="#" class="btn btn-primary">Close</a>
                           </div>                        
                     </div>
                 </div>
+            </div>
             
-                <div class="card mb-4" style="width: 100%">
+                <div class="popup" id="ooe-10">
+                  <div class="card mb-4" style="width: 100%">
                     <div class="card-header">
                         <b><a name="step10"> 10. Auto-response Rules</a></b>
                         
@@ -555,11 +425,14 @@
                                   </details>
                               </div>
                             </div>
+                            <a href="#" class="btn btn-primary">Close</a>
                           </div>                        
                     </div>
                 </div>
+            </div>
             
-                <div class="card mb-4" style="width: 100%">
+                <div class="popup" id="ooe-11">
+                  <div class="card mb-4" style="width: 100%">
                     <div class="card-header">
                         <b><a name="step11"> 11. Workflow Rules</a></b>
                         
@@ -580,11 +453,14 @@
                                   </details>
                               </div>
                             </div>
+                            <a href="#" class="btn btn-primary">Close</a>
                           </div>                        
                     </div>
                 </div>
+            </div>
             
-                <div class="card mb-4" style="width: 100%">
+                <div class="popup" id="ooe-12">
+                  <div class="card mb-4" style="width: 100%">
                     <div class="card-header">
                         <b><a name="step12"> 12. Escalation Rules</a></b>
                         
@@ -605,11 +481,14 @@
                                   </details>
                               </div>
                             </div>
+                            <a href="#" class="btn btn-primary">Close</a>
                           </div>                        
                     </div>
                 </div>
+            </div>
             
-                <div class="card mb-4" style="width: 100%">
+                <div class="popup" id="ooe-13">
+                  <div class="card mb-4" style="width: 100%">
                     <div class="card-header">
                         <b><a name="step13"> 13. Flow Automations</a></b>
                         
@@ -630,11 +509,14 @@
                                   </details>
                               </div>
                             </div>
+                            <a href="#" class="btn btn-primary">Close</a>
                           </div>                        
                     </div>
                 </div>
+            </div>
             
-                <div class="card mb-4" style="width: 100%">
+                <div class="popup" id="ooe-14">
+                  <div class="card mb-4" style="width: 100%">
                     <div class="card-header">
                         <b><a name="step14"> 14. After Save Flows</a></b>
                         
@@ -657,11 +539,14 @@
                                   </details>
                               </div>
                             </div>
+                            <a href="#" class="btn btn-primary">Close</a>
                           </div>                        
                     </div>
                 </div>
+            </div>
             
-                <div class="card mb-4" style="width: 100%">
+                <div class="popup" id="ooe-15">
+                  <div class="card mb-4" style="width: 100%">
                     <div class="card-header">
                         <b><a name="step15"> 15. Entitlement Rules</a></b>
                         
@@ -682,11 +567,14 @@
                                   </details>
                               </div>
                             </div>
+                            <a href="#" class="btn btn-primary">Close</a>
                           </div>                        
                     </div>
                 </div>
+            </div>
             
-                <div class="card mb-4" style="width: 100%">
+                <div class="popup" id="ooe-16">
+                  <div class="card mb-4" style="width: 100%">
                     <div class="card-header">
                         <b><a name="step16"> 16. Roll Up Summaries</a></b>
                         
@@ -696,8 +584,13 @@
                             <div class="row">
                               <div class="col-sm">
                                  
-                                        <div class="text-primary"><i>No automation steps defined.</i></div>
-                                
+                                        <div>
+                                            <div>
+                                                
+                                                <p><b>Author__c</b> is referenced in the roll up summary fields : </p><ul><li>Author__c.Number_Books_Authored__c</li></ul><hr/>
+                                            </div>
+                                        </div>        
+                                    
                                     <p class="alert alert-warning">Partially implemented - roll-up summary fields are processed, but not cross-object workflow.</p>
                                 
                               </div>
@@ -709,11 +602,14 @@
                                   </details>
                               </div>
                             </div>
+                            <a href="#" class="btn btn-primary">Close</a>
                           </div>                        
                     </div>
                 </div>
+            </div>
             
-                <div class="card mb-4" style="width: 100%">
+                <div class="popup" id="ooe-17">
+                  <div class="card mb-4" style="width: 100%">
                     <div class="card-header">
                         <b><a name="step17"> 17. Parent Roll Up Summaries</a></b>
                         
@@ -734,11 +630,14 @@
                                   </details>
                               </div>
                             </div>
+                            <a href="#" class="btn btn-primary">Close</a>
                           </div>                        
                     </div>
                 </div>
+            </div>
             
-                <div class="card mb-4" style="width: 100%">
+                <div class="popup" id="ooe-18">
+                  <div class="card mb-4" style="width: 100%">
                     <div class="card-header">
                         <b><a name="step18"> 18. Criteria based sharing</a></b>
                         
@@ -759,11 +658,14 @@
                                   </details>
                               </div>
                             </div>
+                            <a href="#" class="btn btn-primary">Close</a>
                           </div>                        
                     </div>
                 </div>
+            </div>
             
-                <div class="card mb-4" style="width: 100%">
+                <div class="popup" id="ooe-19">
+                  <div class="card mb-4" style="width: 100%">
                     <div class="card-header">
                         <b><a name="step19"> 19. Commit</a></b>
                         
@@ -784,11 +686,14 @@
                                   </details>
                               </div>
                             </div>
+                            <a href="#" class="btn btn-primary">Close</a>
                           </div>                        
                     </div>
                 </div>
+            </div>
             
-                <div class="card mb-4" style="width: 100%">
+                <div class="popup" id="ooe-20">
+                  <div class="card mb-4" style="width: 100%">
                     <div class="card-header">
                         <b><a name="step20"> 20. Post Commit</a></b>
                         
@@ -809,11 +714,17 @@
                                   </details>
                               </div>
                             </div>
+                            <a href="#" class="btn btn-primary">Close</a>
                           </div>                        
                     </div>
                 </div>
+            </div>
             
         </div>
+    </main>
+</div>
+<br/>
+
         <div class="pt-3"></div>
 <footer class="footer">
     <div class="container-fluid">
